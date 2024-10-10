@@ -1,0 +1,12 @@
+.laptop-transsion {
+      transition-duration: inherit;
+      transition-timing-function: ease-out;
+      transition: 1s;
+
+      &:hover {
+            transform: scale(1.25) rotate(-10deg);
+            position: relative;
+
+            transition: 1s;
+      }
+}
