@@ -22,7 +22,7 @@ const displayProducts = (data) => {
             const { title, thumbnail, price, discountPercentage, rating, category } = product
             const newPrice = price - (discountPercentage / 100) * price
             const productCard = document.createElement("div")
-            productCard.classList = " flex flex-col gap-1 border rounded-lg border-blue-300 p-6 product-card hover:shadow-md justify-between"
+            productCard.classList = " flex flex-col gap-1 border rounded-lg border-yellow-300 p-6 product-card hover:shadow-md justify-between"
             productCard.innerHTML = `
             <img src="${thumbnail}">
                    <h1 class=" text-xl md:text-2xl font-bold">${title}</h1>
