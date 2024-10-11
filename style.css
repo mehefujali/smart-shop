@@ -19,7 +19,7 @@
       &:hover {
             transform: scale(1.05);
             position: relative;
-            background-color: rgba(100, 162, 255, 0.301);
+
             transition: .25s;
       }
 }

@@ -19,13 +19,17 @@ const spnner = (data) => {
 const displayProducts = (data) => {
       const productContainer = document.getElementById("productsContainer")
       data.map(product => {
-            const { title, thumbnail, price, discountPercentage } = product
+            const { title, thumbnail, price, discountPercentage, rating } = product
+            const newPrice = price - (discountPercentage / 100) * price
             const productCard = document.createElement("div")
-            productCard.classList = " flex flex-col gap-3 border rounded-lg border-blue-300 p-6 product-card"
+            productCard.classList = " flex flex-col gap-3 border rounded-lg border-blue-300 p-6 product-card hover:shadow-md"
             productCard.innerHTML = `
             <img src="${thumbnail}">
                    <h1 class=" text-xl md:text-2xl font-bold">${title}</h1>
-                   <p>$${price}</p>
+                   <p class=" "><span class="line-through">$${price}</span>    <span class="text-green-400 font-bold">${discountPercentage}%</span> </p>
+                   <p class=" font-bold">$${newPrice.toFixed(2)}</p>
+
+
             `
 
             productContainer.appendChild(productCard)
